@@ -44,6 +44,7 @@ pipeline {
             steps{
                 script{
                     dir('EKS'){
+                         sh 'terraform refresh'
                          sh 'terraform plan'
                     }
                 }
